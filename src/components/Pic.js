@@ -8,7 +8,7 @@ export default class Pic extends Component {
         return <div className='pic'>
             <div className='head'>
                 <p className='title'>{title}</p>
-                <p className='delete' onClick={this.props.delete.bind('',url)}>delete</p>
+                <p className='delete' onClick={this.props.delete.bind('',id)}>delete</p>
             </div>
             <div className='divimg'>
                 <img src={url}/>
