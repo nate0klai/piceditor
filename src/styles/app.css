@@ -1,0 +1,172 @@
+@media all and (min-width: 900px) {
+    body {
+        background: gray;
+    }
+    .main {
+        width: 900px;
+        margin: auto;
+    }
+    .strip{
+        width: 700px;
+    }
+    .pic>.divimg{
+        width: 700px;
+    }
+}
+@media all and (max-width: 900px) {
+    .main {
+        width: 100vw;
+    }
+    .strip{
+        width: 80vw;
+    }
+    .pic>.divimg{
+        width: 80vw;
+    }
+}
+body{
+    font-family: 'Verdana', 'Geneva', sans-serif;
+}
+.main{
+    background: white;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    align-content: end;
+    justify-content: flex-start;
+}
+.header{
+    flex-basis: 4rem;
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    align-content: center;
+    justify-content: flex-start;
+    border-bottom: 1px solid gray;
+}
+.circle{
+    margin: 1rem;
+    flex-basis: 3rem;
+    height: 3rem;
+    border-radius: 1.5rem;
+    background: black;
+}
+.headtitle{
+    height: 1rem;
+    font-weight: bold;
+}
+.showPopup{
+    color: greenyellow;
+    border-color: greenyellow;
+    flex-basis: 3rem;
+    margin-top: 1rem;
+}
+.strip{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+.pic{
+    display: flex;
+    flex-flow: column nowrap;
+    border: 2px solid gray;
+    margin: 1rem auto;
+    width: 100%;
+}
+.pic>.head{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: flex-end;
+    font-weight: bold;
+}
+.pic .title{
+    max-width: 80%;
+    flex-grow: 9;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-left: 1rem;
+}
+.pic .delete{
+    color: darkred;
+    margin: auto 1rem;
+    text-align: center;
+    flex-grow: 1;
+}
+.pic>.divimg{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    height: 30vw;
+    background: grey;
+}
+img {
+    margin: auto;
+    max-width:100%;
+    max-height:100%;
+}
+.textField{
+    height: 1.4rem;
+    padding: 0.8rem;
+}
+.newPic{
+    width: 100vw;
+    height: 100vh;
+    background: gray;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+@media all and (min-width: 300px) {
+    .newPicForm{
+        width: 21rem;
+    }
+    .textField{
+        width: 12rem;
+    }
+}
+@media all and (max-width: 299px) {
+    .newPicForm{
+        width: 100vw;
+    }
+    .textField{
+        width: 60%;
+    }
+}
+.newPicForm{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: space-around;
+    height: 20rem;
+    margin: auto;
+    background: white;
+}
+.newPicForm .title{
+    font-weight: bold;
+}
+.newPicForm .buttons{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-around;
+    width: 80%;
+}
+.newPicForm .close{
+    border-color: gray;
+}
+.newPicForm .add{
+    color: greenyellow;
+    border-color: greenyellow;
+}
+.button{
+    border-radius: 0.5rem;
+    text-align: center;
+    border-width: 1px;
+    border-style: solid;
+    width: 6rem;
+    height: 3rem;
+    font-weight: bold;
+}
