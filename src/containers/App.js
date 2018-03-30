@@ -34,7 +34,6 @@ class App extends Component {
         this.onClose();
     }
     render() {
-        console.log(this.state);
         const { pics } = this.props;
         return <div>{
             this.state.showNewPic ? <NewPic close={this.onClose.bind(this)} add={this.onAdd.bind(this)}/> :
