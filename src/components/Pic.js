@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, PropTypes } from 'react'
 
 export default class Pic extends Component {
     render() {
@@ -14,4 +14,13 @@ export default class Pic extends Component {
             </div>
         </div>
     }
+}
+
+Pic.propTypes = {
+    data: PropTypes.shape({
+        id: PropTypes.number,
+        title: PropTypes.string,
+        url: PropTypes.string
+    }),
+    delete: PropTypes.func
 }

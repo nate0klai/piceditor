@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, {Component, PropTypes} from 'react'
 
 export default class NewPic extends Component {
     constructor() {
@@ -21,4 +21,9 @@ export default class NewPic extends Component {
             </div>
         </div>
     }
+}
+
+NewPic.propTypes = {
+    close: PropTypes.func,
+    add: PropTypes.func
 }

@@ -1,2 +1,12 @@
-# redux-ru-tutorial
-Код для раздела [Подготовка/ESLint](https://maxfarseer.gitbooks.io/redux-course-ru/content/eslint.html)
+Команда	Результат
+npm i	Установить зависимости
+npm start	Запустить сборку, сервер и слежение за файлами
+
+Назначение папок
+src/            # Исходные файлы.
+  actions/       # - actions.
+  components/          # - "глупые" компоненты.
+  containers/      # - "умные" компоненты.
+  reducers/        # - reducers.
+  store/          # - файлы хранилища.
+  styles/           # - файлы стилей.

@@ -67,6 +67,11 @@ body{
     flex-flow: column nowrap;
     align-items: center;
 }
+.no_pics{
+    font-weight: bold;
+    font-size: large;
+    height: 50vh;
+}
 .pic{
     display: flex;
     flex-flow: column nowrap;
@@ -94,6 +99,7 @@ body{
     margin: auto 1rem;
     text-align: center;
     flex-grow: 1;
+    cursor: pointer;
 }
 .pic>.divimg{
     display: flex;
@@ -169,4 +175,5 @@ img {
     width: 6rem;
     height: 3rem;
     font-weight: bold;
+    cursor: pointer;
 }

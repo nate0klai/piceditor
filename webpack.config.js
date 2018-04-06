@@ -28,7 +28,7 @@ module.exports = {
                 loaders: ['eslint'],
                 include: [
                     path.resolve(__dirname, 'src')
-                ],
+                ]
             }
         ],
         loaders: [

@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, {Component, PropTypes} from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import Header from '../components/Header'
@@ -25,27 +25,38 @@ class App extends Component {
     }
     onAdd(title, url){
         console.log('add');
-        let k = 0, {pics} = this.props;
-        while (k<pics.length) {
-            if (!pics.filter(p=>p.id===k).length) break;
-            k++;
-        }
-        this.props.AppActions.addPic(title, url, k);
-        this.onClose();
+        if (url.substr(0,7)!='http://' && url.substr(0,8)!='https://') url = 'http://' + url;
+        let img = new Image();
+        img.src = url;
+        img.onload = ()=>{
+            let k = 0, {pics} = this.props;
+            while (k<pics.length) {
+                if (!pics.filter(p=>p.id===k).length) break;
+                k++;
+            }
+            this.props.AppActions.addPic(title, url, k);
+            this.onClose();
+        };
+        img.onerror = ()=>{alert('картинки по данному url не существует ;(')};
     }
     render() {
         const { pics } = this.props;
+        console.log(pics);
         return <div>{
             this.state.showNewPic ? <NewPic close={this.onClose.bind(this)} add={this.onAdd.bind(this)}/> :
             <div className='main'>
                 <Header/>
                 <div className='showPopup button' onClick={this.onShowPopup.bind(this)}><p>NEW</p></div>
                 <div className='strip'>
-                    {pics.map((p, i)=><Pic key={i} data={p} delete={this.onDelete.bind(this)}/>)}
+                    {pics.length ? pics.map((p, i)=><Pic key={i} data={p} delete={this.onDelete.bind(this)}/>) : <p className='no_pics'>у вас нет ни одной картинки</p>}
                 </div>
             </div>
         }</div>
     }
+}
+
+App.propTypes = {
+    pics: PropTypes.array
 }
 
 function mapStateToProps (state) {
