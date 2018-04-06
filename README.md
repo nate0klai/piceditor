@@ -9,9 +9,9 @@ npm start
 |Назначение папок |                           |
 |-----------------|---------------------------|
 |src/             |   # Исходные файлы.       |
-|  actions/       |   # - actions.            |
-|  components/    |   # - "глупые" компоненты.|
-|  containers/    |   # - "умные" компоненты. |
-|  reducers/      |   # - reducers.           |
-|  store/         |   # - файлы хранилища.    |
-|  styles/        |   # - файлы стилей.       |
+|src/actions/     |   # - actions.            |
+|src/components/  |   # - "глупые" компоненты.|
+|src/containers/  |   # - "умные" компоненты. |
+|src/reducers/    |   # - reducers.           |
+|src/store/       |   # - файлы хранилища.    |
+|src/styles/      |   # - файлы стилей.       |
